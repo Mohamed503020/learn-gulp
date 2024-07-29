@@ -1,0 +1,32 @@
+
+
+//gulp file => watch , concat , compile 
+
+
+
+const gulp = require('gulp');
+const concat = require('gulp-concat');
+const sass = require('gulp-sass')(require('sass'));
+
+// Task to concatenate JavaScript files
+gulp.task('concat', function() {
+    return gulp.src('./src/*.js')
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('./dist'));
+});
+
+// Task to compile Sass files
+gulp.task('compileSass', function() {
+    return gulp.src('./src/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./dist'));
+});
+
+// Watch task to monitor file changes
+gulp.task('watch', function() {
+    gulp.watch('src/*.js', gulp.series('concat'));
+    gulp.watch('src/*.scss', gulp.series('compileSass'));
+});
+
+// Default task to run the watch task
+gulp.task('default', gulp.series('watch'));

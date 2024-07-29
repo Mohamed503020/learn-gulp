@@ -1,0 +1,1 @@
+function power(n,o){return n**o}var x=5;function sum(n,o){return n+o}function devention(n,o){return n-o}function hello(){console.log("hello")}
