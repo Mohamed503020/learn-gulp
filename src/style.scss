@@ -1,3 +1,52 @@
+.direct-chat {
+    max-width: 350px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.direct-chat-header {
+    background-color: #f7f7f7;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.direct-chat-messages {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+.direct-chat-msg {
+    margin-bottom: 10px;
+}
+.direct-chat-msg.right {
+    text-align: right;
+}
+.direct-chat-msg .direct-chat-text {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+}
+.direct-chat-msg.right .direct-chat-text {
+    background-color: #28a745;
+    color: #fff;
+}
+.direct-chat-footer {
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.direct-chat-footer .input-group {
+    width: 100%;
+}
 
-@import './__header.scss';
-@import './__footer.scss';
+.direct-chat-msg .direct-chat-text ::before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}

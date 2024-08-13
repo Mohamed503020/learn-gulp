@@ -44,7 +44,7 @@ gulp.task('watch', function() {
     liveLoader.listen();
     gulp.watch('src/*.js', gulp.series('js'));
     gulp.watch('src/*.scss', gulp.series('compileSass'));
-    gulp.watch('dist/**/*.*', gulp.series('zip'));
+    // gulp.watch('dist/**/*.*', gulp.series('zip'));
 
 });
 
